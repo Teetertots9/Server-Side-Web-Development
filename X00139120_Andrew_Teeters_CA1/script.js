@@ -13,7 +13,7 @@ async function getDataAsync() {
         console.log(json);
 
         displayData(json);
-        //displayCategories(json);
+        displayCategories(json);
 
     } catch (err) {
         console.log(err);

@@ -5,6 +5,8 @@ const bodyParser = require('body-parser');
 const HOST = '0.0.0.0';
 const PORT = 8080;
 
+require('./security/passportConfig');
+
 // app is a new instance of express (the web app framework)
 let app = express();
 
@@ -32,6 +34,10 @@ app.use(bodyParser.urlencoded({ extended: true })); // support url encoded bodie
 app.use('/', require('./routes/index'));
 
 app.use('/product', require('./routes/product'));
+
+app.use('./user', require('./routes/user'));
+
+app.use('.login', require('./routes/login'));
 
 
 // catch 404 and forward to error handler
