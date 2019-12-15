@@ -1,0 +1,19 @@
+{
+    "connection":{
+        "user" : "caUser",
+        "password": "SSWDCA@2",
+        "server" : "sswdca2server.database.windows.net",
+        "database" : "CA2",
+        "parseJSON": true,
+        "options":
+        {
+            "encrypt" : true
+        },
+        "pool":
+        {
+        "min": 2,
+        "max": 4,
+        "idleTimeoutMillis": 30000
+        }
+    }
+}
